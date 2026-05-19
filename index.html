@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeStream - Premium Lossless Music Streaming</title>
+  <meta name="description" content="Stream your favorite songs in premium 320kbps high quality completely for free. Experience fluid animations, glassmorphic dark mode, and seamless playback.">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Patrick+Hand&family=Delius&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-website-bg" id="ambient-website-bg"></div>
+
+  <!-- Fullscreen App Container -->
+  <div class="app-container">
+    
+    <!-- Left Sidebar Panel -->
+    <aside class="sidebar">
+      <!-- Logo Branding -->
+      <div class="brand">
+        <div class="logo-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <span class="brand-name">Vibe<span>Stream</span></span>
+      </div>
+
+      <!-- Quick Search Tool -->
+      <div class="sidebar-search">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="search-input" placeholder="Search songs, artists..." autocomplete="off">
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="sidebar-nav">
+        <p class="nav-title">Discover</p>
+        <ul>
+          <li class="nav-item active" id="nav-discover">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore Hits</span>
+          </li>
+          <li class="nav-item" id="nav-favorites-tab">
+            <i class="fa-solid fa-heart"></i>
+            <span>My Favorites</span>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Curated Playlists / Favorites list shortcut -->
+      <div class="library-shortcut">
+        <div class="nav-title-wrapper">
+          <span class="nav-title">Library</span>
+          <span class="badge" id="fav-count">0</span>
+        </div>
+        <div class="sidebar-favorites-list" id="sidebar-favorites">
+          <p class="empty-favorites">No saved tracks yet.</p>
+        </div>
+      </div>
+      
+      <!-- Footer Copyright in Sidebar -->
+      <div class="sidebar-footer">
+        <p>Premium 320kbps Quality</p>
+        <span class="status-indicator"><span class="dot"></span> Online</span>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Workspace -->
+    <main class="main-content">
+      <!-- Top Bar Header -->
+      <header class="main-header">
+        <div class="greeting-box">
+          <h1 id="main-greeting">Good evening</h1>
+          <p>Ready to vibe? Dive into direct high-quality streaming.</p>
+        </div>
+        <div class="badge-premium">
+          <i class="fa-solid fa-crown"></i> Free Premium
+        </div>
+      </header>
+
+      <!-- Apple Music Premium Hero Workspace -->
+      <section class="apple-workspace">
+        
+        <!-- Large 1:1 Aspect Ratio Album Art Card -->
+        <div class="apple-hero-container">
+          <div class="apple-hero-bg-blur" id="hero-bg-blur"></div>
+          <div class="apple-hero-card">
+            <img id="hero-artwork" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=400&auto=format&fit=crop" alt="Hero Artwork">
+            <div class="hero-overlay-controls">
+              <div class="hero-info">
+                <h3 id="hero-title">Welcome to VibeStream</h3>
+                <p id="hero-artist">Premium Audio Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artists Circular Shelf -->
+        <div class="apple-artists-shelf">
+          <div class="shelf-header">
+            <h3>Your Unique Mix</h3>
+            <p>Favorite artists, curated for you</p>
+          </div>
+          <div class="artists-circle-container">
+            
+            <div class="apple-artist-circle" data-artist="Mihiran">
+              <img src="images/mihiran.png" alt="Mihiran" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=150&auto=format&fit=crop'">
+              <p>Mihiran</p>
+            </div>
+            
+            <div class="apple-artist-circle" data-artist="Uvindu">
+              <img src="images/uvindu.png" alt="Uvindu" onerror="this.src='https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=150&auto=format&fit=crop'">
+              <p>Uvindu</p>
+            </div>
+            
+            <div class="apple-artist-circle" data-artist="Iman Fernando">
+              <img src="images/iman.png" alt="Iman Fernando" onerror="this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=150&auto=format&fit=crop'">
+              <p>Iman F.</p>
+            </div>
+            
+            <div class="apple-artist-circle" data-artist="Dilu Beats">
+              <img src="images/dilu.png" alt="Dilu Beats" onerror="this.src='https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=150&auto=format&fit=crop'">
+              <p>Dilu Beats</p>
+            </div>
+            
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Songs Section Grid -->
+      <section class="songs-section">
+        <div class="section-header">
+          <h2 id="section-title" class="section-title">Trending Hits</h2>
+          <div class="section-actions">
+            <span class="results-count" id="results-count" style="display: none;">0 songs found</span>
+            <a href="#" class="see-all-link" id="see-all-btn">See All</a>
+          </div>
+        </div>
+
+        <!-- Loader Spinner -->
+        <div class="loader-container" id="songs-loader" style="display: none;">
+          <div class="spinner"></div>
+          <p>Tuning in to the vibe...</p>
+        </div>
+
+        <!-- Error Message Panel -->
+        <div class="error-container" id="songs-error" style="display: none;">
+          <i class="fa-solid fa-circle-exclamation error-icon"></i>
+          <p id="error-message">Could not fetch songs. Please try again.</p>
+          <button class="btn btn-outline" id="retry-btn">Retry</button>
+        </div>
+
+
+
+        <!-- Songs Grid Container -->
+        <div id="songs-grid" class="songs-grid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Persistent Music Player Bar -->
+    <footer class="player-bar">
+      
+      <!-- Left: Song Details -->
+      <div class="player-left">
+        <div class="current-track-artwork">
+          <img id="player-artwork" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=150&auto=format&fit=crop" alt="Song Artwork">
+          <div class="artwork-overlay">
+            <i class="fa-solid fa-music"></i>
+          </div>
+        </div>
+        <div class="current-track-info">
+          <h4 id="player-title" class="track-title-ticker">Select a Song</h4>
+          <p id="player-artist" class="track-artist">Discover new sounds</p>
+        </div>
+        <button class="player-fav-btn" id="player-fav-btn" title="Add to Favorites">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <!-- Center: Playback Progress & Control buttons -->
+      <div class="player-center">
+        <!-- Controls buttons -->
+        <div class="playback-controls">
+          <button class="control-btn" id="shuffle-btn" title="Shuffle Playback">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+          <button class="control-btn" id="prev-btn" title="Previous Track">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button class="control-btn play-pause-btn" id="play-btn" title="Play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="control-btn" id="next-btn" title="Next Track">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+          <button class="control-btn" id="repeat-btn" title="Repeat Track">
+            <i class="fa-solid fa-repeat"></i>
+          </button>
+        </div>
+        
+        <!-- Progress bar and timer -->
+        <div class="progress-container">
+          <span class="time-label" id="current-time">0:00</span>
+          <div class="progress-bar-wrapper">
+            <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
+            <div class="progress-glow-fill" id="progress-fill"></div>
+          </div>
+          <span class="time-label" id="total-time">0:00</span>
+        </div>
+      </div>
+
+      <!-- Right: Utility Controls (Volume & Mute) -->
+      <div class="player-right">
+        <div class="volume-control">
+          <button class="volume-icon-btn" id="volume-icon" title="Mute/Unmute">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+          <div class="volume-slider-wrapper">
+            <input type="range" id="volume-slider" min="0" max="100" value="100">
+            <div class="volume-glow-fill" id="volume-fill"></div>
+          </div>
+        </div>
+        <button class="util-btn" id="queue-btn" title="Up Next Queue">
+          <i class="fa-solid fa-list-ul"></i>
+        </button>
+        <button class="util-btn" id="lyrics-btn" title="Visualizer Mode">
+          <i class="fa-solid fa-chart-simple"></i>
+        </button>
+        <button class="util-btn" id="fullscreen-btn" title="Full Screen View">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- Hidden YouTube Player Container (Ad-free Audio Streaming Bridge) -->
+    <div id="youtube-player-container" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; overflow: hidden; pointer-events: none;">
+      <div id="youtube-player"></div>
+    </div>
+    
+    <!-- Ultra-Premium Fullscreen Overlay (Apple Music / Spotify Style) -->
+    <div class="fullscreen-overlay" id="fullscreen-overlay">
+      <div class="overlay-dynamic-bg" id="overlay-dynamic-bg"></div>
+      <div class="overlay-gradient-shade"></div>
+      
+      <nav class="overlay-top-nav">
+        <button class="overlay-back-btn" id="close-overlay">
+          <i class="fa-solid fa-chevron-down"></i> Back to Home
+        </button>
+      </nav>
+      
+      <div class="overlay-content-split">
+        
+        <!-- Left Side: Giant Artwork & Up Next -->
+        <div class="overlay-split-left">
+          <div class="overlay-artwork-container">
+            <img id="overlay-artwork" src="" alt="Artwork Large">
+          </div>
+          
+          <div class="overlay-up-next-container">
+            <div class="up-next-carousel" id="overlay-up-next-list">
+              <!-- Up next items injected by JS -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Prominent Lyrics -->
+        <div class="overlay-split-right">
+          <div class="premium-lyrics-display" id="lyrics-container">
+            <p id="dynamic-lyric-text" class="lyric-focus-text">Lyrics Not Available</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Integrated Bottom Player inside Fullscreen -->
+      <div class="overlay-bottom-section">
+        <div class="overlay-glass-controls glass-panel">
+          <!-- Left: Track Details -->
+          <div class="glass-controls-left">
+            <div class="overlay-details-premium">
+              <h1 id="overlay-title">Song Title</h1>
+              <h2 id="overlay-artist">Artist Name</h2>
+            </div>
+          </div>
+
+          <!-- Center: Player Controls & Progress -->
+          <div class="glass-controls-center">
+            <div class="overlay-playback-buttons">
+              <button class="control-btn" id="fs-shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+              <button class="control-btn" id="fs-prev-btn"><i class="fa-solid fa-backward-step"></i></button>
+              <button class="control-btn play-pause-btn" id="fs-play-btn"><i class="fa-solid fa-play"></i></button>
+              <button class="control-btn" id="fs-next-btn"><i class="fa-solid fa-forward-step"></i></button>
+              <button class="control-btn" id="fs-repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="overlay-progress-container">
+              <span class="time-label" id="fs-current-time">0:00</span>
+              <div class="progress-bar-wrapper fs-wrapper">
+                <input type="range" id="fs-progress-bar" min="0" max="100" value="0" step="0.1">
+                <div class="progress-glow-fill" id="fs-progress-fill"></div>
+              </div>
+              <span class="time-label" id="fs-total-time">0:00</span>
+            </div>
+          </div>
+
+          <!-- Right: Volume & Toggles -->
+          <div class="glass-controls-right">
+            <button class="control-btn toggle-btn" id="fs-bass-btn" title="Virtual Bass Boost"><i class="fa-solid fa-drum"></i></button>
+            <button class="control-btn toggle-btn" id="fs-lyrics-toggle"><i class="fa-solid fa-quote-right"></i></button>
+            <div class="volume-container">
+              <i class="fa-solid fa-volume-low"></i>
+              <input type="range" id="fs-volume-bar" min="0" max="100" value="100" class="volume-slider">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Up Next Queue Panel -->
+    <div class="queue-panel" id="queue-panel">
+      <div class="queue-header">
+        <h3><i class="fa-solid fa-list-ul"></i> Up Next</h3>
+        <button id="close-queue-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="queue-list" id="queue-list">
+        <!-- Queue items go here -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Client Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
