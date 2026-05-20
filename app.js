@@ -44,14 +44,14 @@ SRI_LANKAN_CATALOG.forEach(song => {
 // --- Synced Lyrics Database ---
 const LYRICS_DB = {
   '-6BUxPk0nzU': [
-    { time: 21, text: 'මගේ හීන සරසා, සඳක් අහසෙ ගිලුනා' },
-    { time: 31, text: 'මටත් නොදැනි මං තනි වෙලා' },
-    { time: 41, text: 'මගේ නොවන හින්දා, දරා කදුලු හංගා' },
-    { time: 51, text: 'ඔහේ ජීවිතේ ගෙවෙනවා' },
-    { time: 61, text: 'නුඹෙම වී ඇවිලිලා, දුන්නු ඒ පෙම් සිනා' },
-    { time: 71, text: 'මාවතේ තැන් පුරා, ආදරේ සොයමි මා' },
-    { time: 82, text: 'නුඹ නොඑනා දිනේ, හිත තනි වී වගේ' },
-    { time: 92, text: 'නුඹ ඇයිදෝ සඳේ... ම්ම්... මගේ...' },
+    { time: 11, text: 'මගේ හීන සරසා, සඳක් අහසෙ ගිලුනා' },
+    { time: 17, text: 'මටත් නොදැනි මං තනි වෙලා' },
+    { time: 22, text: 'මගේ නොවන හින්දා, දරා කදුලු හංගා' },
+    { time: 27, text: 'ඔහේ ජීවිතේ ගෙවෙනවා' },
+    { time: 34, text: 'නුඹෙම වී ඇවිලිලා, දුන්නු ඒ පෙම් සිනා' },
+    { time: 43.5, text: 'මාවතේ තැන් පුරා, ආදරේ සොයමි මා' },
+    { time: 53.5, text: 'නුඹ නොඑනා දිනේ, හිත තනි වී වගේ' },
+    { time: 59.8, text: 'නුඹ ඇයිදෝ සඳේ... ම්ම්... මගේ...' },
     { time: 103, text: 'සඳ නුඹ ඇවිදින්, මට ඇයිදෝ කියන්' },
     { time: 113, text: 'නුඹ ලග ඇවිදින් ඉන්නම්' },
     { time: 123, text: 'තරු අතරින් මං, දුර ඈතින් බලන්' },
@@ -64,6 +64,34 @@ const LYRICS_DB = {
     { time: 216, text: 'මාවතේ තැන් පුරා, ආදරේ සොයමි මා' },
     { time: 226, text: 'නුඹ නොඑනා දිනේ, හිත තනි වී වගේ' },
     { time: 236, text: 'නුඹ ඇයිදෝ සඳේ... ම්ම්... මගේ...' }
+  ],
+  'FuZox51gFdU': [
+    { time: 12, text: '♪ අපි ආයේ හමුවෙලා ♪' },
+    { time: 18, text: 'අපි ආයේ හමුවෙලා, මඟ තොටකදි දවසක' },
+    { time: 26, text: 'නොදන්නා ලෙසින් යන්නම්, අපි අපේ මඟ බලා...' },
+    { time: 34, text: 'මතකයන් හදේ දරා, හීනෙන්වත් නොතැවෙන්නම්' },
+    { time: 42, text: 'මගේ ආදරේ සදා, නුඹේ සතුටම පතන්නම්...' },
+    { time: 50, text: 'අපි ආයේ හමුවෙලා, මඟ තොටකදි දවසක' },
+    { time: 58, text: 'නොදන්නා ලෙසින් යන්නම්, අපි අපේ මඟ බලා...' },
+    { time: 66, text: '♪ සංගීතය වාදනය වේ ♪' },
+    { time: 89, text: 'නුඹ නොකී කතා එදා, රහසක්ව හිතේ තියා' },
+    { time: 97, text: 'මඟ ඇරුණු පෙම් සෙනේ, තනිවී විඳින්න තිබුණා' },
+    { time: 105, text: 'කඳුලක්ම වී හදේ, මගේ ආදරේ නුඹයි' },
+    { time: 113, text: 'නොලැබුණුත් සංසාරයේ, මං තාම නුඹේමයි...' },
+    { time: 121, text: 'අපි ආයේ හමුවෙලා, මඟ තොටකදි දවසක' },
+    { time: 129, text: 'නොදන්නා ලෙසින් යන්නම්, අපි අපේ මඟ බලා...' },
+    { time: 137, text: 'මතකයන් හදේ දරා, හීනෙන්වත් නොතැවෙන්නම්' },
+    { time: 145, text: 'මගේ ආදරේ සදා, නුඹේ සතුටම පතන්නම්...' },
+    { time: 153, text: 'අපි ආයේ හමුවෙලා, මඟ තොටකදි දවසක' },
+    { time: 161, text: 'නොදන්නා ලෙසින් යන්නම්, අපි අපේ මඟ බලා...' }
+  ],
+  'df37ZRkuHSg': [
+    { time: 10, text: '♪ දේවදූතියක් වගේ ♪' },
+    { time: 15, text: 'දේවදූතියක් වගේ නුඹ මඟ හරිනවද මාව?' },
+    { time: 24, text: 'මේ හිත තනිකරලා ආදරේ රහසක්ම වේද?' },
+    { time: 33, text: 'පැතුම් බොඳ වී ගියත් මගේ හීන මල් පිපේද?' },
+    { time: 42, text: 'නුඹ මගේ ලඟින් උන්නු මතකයන් සුවඳ දේද?' },
+    { time: 51, text: '♪ දේවදූතියක් වගේ නුඹ... ♪' }
   ]
 };
 
@@ -234,6 +262,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach All Event Listeners
   setupEventListeners();
+
+  // Turn on virtual bass boost mode active by default
+  const fsBassBtn = document.getElementById('fs-bass-btn');
+  if (fsBassBtn && fullscreenOverlay) {
+    fullscreenOverlay.classList.add('bass-boost-active');
+    fsBassBtn.classList.add('active');
+  }
 });
 
 // Set dynamic greeting based on system time
@@ -709,6 +744,9 @@ function playTrackAtIndex(index) {
   const song = currentPlaylist[currentIndex];
   
   console.log(`[Playback Manager] Inserting Cassette tape index ${currentIndex}: "${song.name}" by ${song.artist}`);
+
+  // Auto-fetch lyrics dynamically for the active track
+  fetchLyricsForTrack(song);
 
   // Load and play video ID from YouTube ad-free CDN!
   ytPlayer.loadVideoById(song.id);
@@ -1257,4 +1295,84 @@ function handleKeyboardShortcuts(e) {
       updateVolumeUI(newVolDown);
       break;
   }
+}
+
+// --- Dynamic Lyrics Fetcher & Parser (LRCLIB Integration) ---
+
+async function fetchLyricsForTrack(song) {
+  // Check if we already have lyrics for this song ID
+  if (LYRICS_DB[song.id]) {
+    console.log(`[Lyrics Engine] Lyrics already exist in memory for ${song.name}`);
+    return;
+  }
+  
+  console.log(`[Lyrics Engine] Attempting to auto-fetch lyrics for ${song.name} - ${song.artist}`);
+  
+  try {
+    // We search using the song name and artist to find the best matching record
+    const query = encodeURIComponent(`${song.name} ${song.artist}`);
+    const response = await fetch(`https://lrclib.net/api/search?q=${query}`);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const data = await response.json();
+    
+    if (data && data.length > 0) {
+      // Prioritize synced lyrics, fallback to plain lyrics
+      const match = data.find(item => item.syncedLyrics) || data[0];
+      
+      if (match.syncedLyrics) {
+        const parsed = parseLrc(match.syncedLyrics);
+        if (parsed && parsed.length > 0) {
+          LYRICS_DB[song.id] = parsed;
+          console.log(`[Lyrics Engine] Successfully loaded synced lyrics for ${song.name}`);
+          return;
+        }
+      }
+      
+      if (match.plainLyrics) {
+        // Convert plain lyrics into evenly spaced timed lyrics as a high-quality fallback!
+        const lines = match.plainLyrics.split('\n').map(l => l.trim()).filter(Boolean);
+        if (lines.length > 0) {
+          const duration = song.duration || 210;
+          const spacing = duration / (lines.length + 2);
+          const parsed = lines.map((text, idx) => ({
+            time: Math.round((idx + 1) * spacing),
+            text: text
+          }));
+          LYRICS_DB[song.id] = parsed;
+          console.log(`[Lyrics Engine] Timed fallback lyrics loaded from plain lyrics for ${song.name}`);
+          return;
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`[Lyrics Engine] Failed to retrieve lyrics from LRCLIB:`, error);
+  }
+}
+
+function parseLrc(lrcText) {
+  if (!lrcText) return null;
+  const lines = lrcText.split('\n');
+  const result = [];
+  // Match lines like [01:23.45] text or [01:23] text
+  const timeRegex = /\[(\d+):(\d+)(?:\.(\d+))?\]/g;
+  
+  for (const line of lines) {
+    timeRegex.lastIndex = 0;
+    const match = timeRegex.exec(line);
+    if (match) {
+      const minutes = parseInt(match[1], 10);
+      const seconds = parseInt(match[2], 10);
+      const ms = match[3] ? parseInt(match[3], 10) : 0;
+      const totalSeconds = minutes * 60 + seconds + (ms / 100);
+      const text = line.replace(timeRegex, '').trim();
+      
+      result.push({
+        time: totalSeconds,
+        text: text || '♪'
+      });
+    }
+  }
+  
+  result.sort((a, b) => a.time - b.time);
+  return result;
 }

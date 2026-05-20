@@ -1305,7 +1305,7 @@ input[type="range"]:hover + .volume-glow-fill {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10%;
+  padding: 0 10% 160px 10%; /* Added 160px bottom padding to prevent overlap with absolute floating control panel! */
   gap: 8%;
   margin-top: 110px; /* Increased breathing room between back button and cover artwork! */
 }
@@ -2491,5 +2491,49 @@ input[type="range"]:hover + .volume-glow-fill {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+}
+
+/* ==========================================================================
+   HEIGHT-RESPONSIVE VIEWPORT STYLES (PREVENTS OVERLAPPING OVERLAY CONTROLS)
+   ========================================================================== */
+@media (max-height: 850px) {
+  .overlay-content-split {
+    margin-top: 80px;
+    padding: 0 10% 150px 10%;
+    gap: 5%;
+  }
+  .overlay-artwork-container {
+    width: 320px;
+    height: 320px;
+  }
+  .overlay-up-next-container {
+    width: 320px;
+  }
+  .lyric-focus-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .overlay-content-split {
+    margin-top: 60px;
+    padding: 0 8% 140px 8%;
+    gap: 4%;
+  }
+  .overlay-artwork-container {
+    width: 240px;
+    height: 240px;
+  }
+  .overlay-up-next-container {
+    width: 240px;
+    gap: 20px;
+  }
+  .up-next-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+  .lyric-focus-text {
+    font-size: 1.6rem;
+  }
 }
 
